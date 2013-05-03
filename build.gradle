@@ -1,0 +1,46 @@
+apply plugin: 'groovy'
+
+version = "0.1.0-SNAPSHOT"
+group = "org.nineworthies.eclipse"
+
+repositories {
+	mavenCentral()
+	mavenLocal()
+	maven {
+		url "https://s3-eu-west-1.amazonaws.com/nineworthies-public-repo/snapshot"
+	}
+}
+
+dependencies {
+	compile 'org.codehaus.groovy:groovy-all:2.1.1'
+	compile('org.nineworthies.eclipse:eclipse-command-dsl:0.1.0-SNAPSHOT') {
+		changing = true
+	}
+}
+
+compileJava.enabled = false
+compileGroovy.enabled = false
+processResources.enabled = false
+classes.enabled = false
+jar.enabled = false
+assemble.enabled = false
+compileTestJava.enabled = false
+compileTestGroovy.enabled = false
+processTestResources.enabled = false
+testClasses.enabled = false
+test.enabled = false
+
+task distZip(type: Zip) {
+	def baseDir = { archiveName - ".zip" }
+	into(baseDir) {
+		from(project.file("src/dist"))
+		into("bin") {
+			from("src/main/scripts")
+			include("**/*.groovy")
+		}
+		into("config") {
+			from("src/main/config")
+			include("*.properties")
+		}
+	}
+}
