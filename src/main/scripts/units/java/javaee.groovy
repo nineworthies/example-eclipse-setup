@@ -22,6 +22,9 @@ director {
 			id "org.eclipse.jst.server_adapters.feature.feature.group"
 		}
 		installableUnit {
+			id "org.eclipse.jst.server_adapters.ext.feature.feature.group"
+		}
+		installableUnit {
 			id "org.eclipse.jst.web_ui.feature.feature.group"
 		}
 		installableUnit {
