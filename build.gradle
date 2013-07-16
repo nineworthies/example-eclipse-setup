@@ -7,7 +7,7 @@ repositories {
 	mavenCentral()
 	mavenLocal()
 	maven {
-		url "https://nineworthies-public-repo.s3-website-eu-west-1.amazonaws.com/release"
+		url "http://nineworthies-public-repo.s3-website-eu-west-1.amazonaws.com/release"
 	}
 }
 
