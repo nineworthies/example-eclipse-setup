@@ -4,7 +4,7 @@ include "../../include/repository-google.groovy"
 director {
 	unitsFromRepositoryNamed ("google") {
 		installableUnit {
-			id "com.google.gdt.eclipse.suite.e42.feature.feature.group"
+			id "com.google.gdt.eclipse.suite.e43.feature.feature.group"
 		}
 		installableUnit {
 			id "com.google.gwt.eclipse.sdkbundle.feature.feature.group"

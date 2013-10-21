@@ -1,3 +1,3 @@
 director {
-	repositoryNamed("eclipse", "http://download.eclipse.org/releases/juno")
+	repositoryNamed("eclipse", "http://download.eclipse.org/releases/kepler")
 }
